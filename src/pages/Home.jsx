@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -11,12 +12,12 @@ export default function Home() {
         <p className="text-lg mb-10 max-w-xl mx-auto">
           A community-driven platform where tennis fans share match-point tales, court-side memories, and personal tennis narratives.
         </p>
-        <a
-          href="/submit-story"
+        <Link
+          to="/submit-story"
           className="inline-block bg-primaryGreen text-accentWhite font-semibold py-3 px-8 rounded shadow hover:bg-green-700 transition"
         >
           Share Your Story
-        </a>
+        </Link>
       </section>
 
       {/* Features Section */}
@@ -38,7 +39,7 @@ export default function Home() {
           <div
             key={i}
             className="border border-charcoal border-opacity-30 rounded-lg p-6 hover:shadow-lg transition-shadow cursor-pointer"
-            style={{ borderStyle: "dotted" }} // subtle net-style border
+            style={{ borderStyle: "dotted" }}
           >
             <h3 className="font-montserrat font-bold text-primaryGreen mb-2">{title}</h3>
             <p className="text-slateGray text-sm">{desc}</p>
@@ -61,12 +62,12 @@ export default function Home() {
               <p className="text-slateGray text-sm line-clamp-3">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur pretium, massa nec lacinia vehicula, justo urna consequat velit, eu finibus elit magna nec lacus.
               </p>
-              <a
-                href={`/stories/${storyId}`}
+              <Link
+                to={`/stories/${storyId}`}
                 className="inline-block mt-4 text-primaryGreen font-semibold hover:underline"
               >
                 Read More →
-              </a>
+              </Link>
             </div>
           ))}
         </div>
